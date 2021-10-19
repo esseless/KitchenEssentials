@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/intro.css">
+    <link rel="stylesheet" href="css/store.css">
+    <link rel="stylesheet" href="css/cart.css">
+    <link rel="stylesheet" href="css/customer-form.css">
+    <link rel="stylesheet" href="css/receipt.css">
+    <link rel="shortcut icon" href="assets/favicon.ico">
+    <script src="assets/configs/products.js"></script>
+    <script src="js/helpers/validator.js"></script>
+    <script src="js/helpers/visibility-controller.js"></script>
+    <script src="js/template-getter.js"></script>
+    <script src="js/template-builder.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/customer-form.js"></script>
+    <script src="js/receipt.js"></script>
+    <script src="js/script.js"></script>
+    <title>ICT Aid Fundraiser!</title>
+</head>
+
+<body>
+    <div class="app-store">
+        <div class="intro-container" id="intro-container">
+            <div class="intro-image">
+                <img src="./assets/images/garage_sale.jpg" alt="sale">
+            </div>
+            <div class="intro-header">
+                <h4>Shop and help!</h4>
+                <h1>Our garage sale</h1>
+                <div>
+                    <h5><span>For the benefit of Laskshya Foundation's</span></h5>
+                    <h5><span>ICT Aid Drive for Government Schools</span></h5>
+                </div>
+                <h1>is now live!!</h1>
+            </div>
+            <div class="intro-footer">
+                <button onclick="showCatalogue()">Continue to shop >>></button>
+            </div>
+        </div>
+        <div id="store" class="store-container" hidden>
+            <div class="store-header">
+                <div class="clear-filter">
+                    <button onclick="clearFilters()">
+                        <span>Clear filters</span>
+                        <img src="assets/images/clear_filters.png" alt="clear-filter" class="filter-icon">
+                    </button>
+                </div>
+                <h3> <span>Choose a category to shop from</span> </h3>
+                <div class="categories" id="categories"></div>
+            </div>
+            <div class="store-body" id="store-body"></div>
+            <div class="store-footer" id="store-footer" hidden>
+                <button type="button" class="view-cart" onclick="viewCart()">
+                    <span>Review Cart</span>
+                </button>
+            </div>
+        </div>
+        <div id="view-cart" class="cart-modal">
+            <div class="cart-modal-content">
+                <div class="cart-header">
+                    <span id="cart-item-count"></span>
+                    <span id="cart-error-field" class="cart-error-field"></span>
+                </div>
+                <div class="cart-modal-body" id="cart-body"></div>
+                <div class="cart-modal-footer" id="cart-footer">
+                    <button type="button" class="view-cart" onclick="checkout()">
+                        <span>Checkout</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="form" class="form-modal" hidden>
+            <div class="form-modal-content">
+                <div class="form-header">
+                    <h2><span>Checkout</span></h2>
+                    <span id="form-error-field" class="form-error-field"></span>
+                </div>
+                <div class="form-body" id="form-body">
+                    <form class="customer-details-form">
+                        <div class="form-item">
+                            <label>Name</label>
+                            <div class="form-item-input">
+                                <input type="text" name="Name" id="name" placeholder="Full name" class="form-input">
+                                <span id="name-error-field" class="error-field"></span>
+                            </div>
+                        </div>
+                        <div class="form-item">
+                            <label>E-mail</label>
+                            <div class="form-item-input">
+                                <input type="text" name="E-mail" id="email" placeholder="xyz@domain.com"
+                                    class="form-input">
+                                <span id="email-error-field" class="error-field"></span>
+                            </div>
+                        </div>
+                        <div class="form-item">
+                            <label>Credit Card</label>
+                            <div class="form-item-input">
+                                <input type="text" name="Credit Card Number" id="credit-card"
+                                    placeholder="xxxx-xxxx-xxxx-xxxx" maxlength="19" class="form-input">
+                                <span id="credit-card-error-field" class="error-field"></span>
+                            </div>
+                        </div>
+                        <div class="form-item">
+                            <div class="form-sub-item">
+                                <label>Exp Month</label>
+                                <div class="form-item-input">
+                                    <input type="text" name="Credit Expiry Month" id="expiry-month" placeholder="MMM"
+                                        maxlength="3" class="form-input">
+                                    <span id="month-error-field" class="error-field"></span>
+                                </div>
+                            </div>
+                            <div class="form-sub-item">
+                                <label>Exp Year</label>
+                                <div class="form-item-input">
+                                    <input type="text" name="Credit Expiry Year" id="expiry-year" placeholder="YYYY"
+                                        maxlength="4" class="form-input">
+                                    <span id="year-error-field" class="error-field"></span>
+                                </div>
+                            </div>
+                            <div class="form-sub-item">
+                                <label>CVV</label>
+                                <div class="form-item-input">
+                                    <input type="text" name="CVV" id="cvv" placeholder="123" maxlength="3"
+                                        class="form-input">
+                                    <span id="cvv-error-field" class="error-field"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="form-footer" id="form-footer">
+                    <button type="button" onclick="confirmOrder()">
+                        <span>Confirm Order</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="receipt" class="receipt-modal">
+            <div class="receipt-modal-content">
+                <div class="receipt-header">
+                    <span>Purchase Successful!</span>
+                </div>
+                <div class="receipt-modal-body" id="receipt-body">
+                    <div class="customer-details">
+                        <div class="customer-item">
+                            <div class="customer-item-label">Name</div>
+                            <div class="customer-item-value" id="customer-name"></div>
+                        </div>
+                        <div class="customer-item">
+                            <div class="customer-item-label">Email</div>
+                            <div class="customer-item-value" id="customer-email"></div>
+                        </div>
+                        <div class="customer-item">
+                            <div class="customer-item-label">Credit Card</div>
+                            <div class="customer-item-value" id="customer-credit-card"></div>
+                        </div>
+                    </div>
+                    <div class="product-details">
+                        <div class="product-details-header">
+                            <div class="product-label">Item</div>
+                            <div class="product-label">Quantity</div>
+                            <div class="product-label">Unit Price</div>
+                            <div class="product-label">Total Price</div>
+                        </div>
+                        <div class="product-details-body" id="product-details-body"></div>
+                        <div class="product-details-footer">
+                            <div class="product-details-footer-item">
+                                <div class="product-details-footer-label">Donation</div>
+                                <div class="product-details-footer-value" id="donation"></div>
+                            </div>
+                            <div class="product-details-footer-item">
+                                <div class="product-details-footer-label">Total</div>
+                                <div class="product-details-footer-value" id="total"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="receipt-footer" id="receipt-footer">
+                    <button type="button" onclick="shopMore()">
+                        <span>&lt;&lt;&lt; Home</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <p>All the images have been sourced from <cite><a href="https://unsplash.com/">https://unsplash.com/</a></cite></p>
+</body>
+
+</html>

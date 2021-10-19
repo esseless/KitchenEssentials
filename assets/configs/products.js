@@ -1,0 +1,155 @@
+const products = [{
+        "_id": "60d075728fa5e1c1306c13d0",
+        "index": 0,
+        "guid": "a7634fe8-e0b8-41d5-8278-855b09f41736",
+        "price": 12.67,
+        "img": "assets/images/Kitchen/water-bottles.jpg",
+        "name": "Water bottle (gripper)",
+        "availableCount": 8,
+        "purchaseCount": 0,
+        "type": "Kitchen"
+    },
+    {
+        "_id": "60d075724de3ea6f7842e6ff",
+        "index": 1,
+        "guid": "76ae2bb8-5904-434a-983c-14051bb32d18",
+        "price": 9.36,
+        "img": "assets/images/Decor/decor-1.jpg",
+        "name": "Decor plant",
+        "availableCount": 8,
+        "purchaseCount": 0,
+        "type": "Decor"
+    },
+    {
+        "_id": "60d07572d42a5d8c2feef9dd",
+        "index": 2,
+        "guid": "32fdf556-33ea-48e2-bc93-abcb0c4201bd",
+        "price": 45.00,
+        "img": "assets/images/furniture/furniture-4.jpg",
+        "name": "Study table with chair",
+        "availableCount": 1,
+        "purchaseCount": 0,
+        "type": "Furniture"
+    },
+    {
+        "_id": "60d0757209a2ababb8eee153",
+        "index": 3,
+        "guid": "8eabc5a6-1454-4aea-b1b6-883e61d6b9dd",
+        "price": 36.55,
+        "img": "assets/images/Decor/decor-3.jpg",
+        "name": "Antique mirror",
+        "availableCount": 3,
+        "purchaseCount": 0,
+        "type": "Decor"
+    },
+    {
+        "_id": "60d075722d4a4dff34d1980c",
+        "index": 4,
+        "guid": "a530ae68-dc91-471a-b426-c50d71edf555",
+        "price": 299.0,
+        "img": "assets/images/Accessories/apple.jpg",
+        "name": "Apple watch series 4",
+        "availableCount": 1,
+        "purchaseCount": 0,
+        "type": "Accessories"
+    },
+    {
+        "_id": "60d07572498b571ad20d90a2",
+        "index": 5,
+        "guid": "e415d4f3-36e0-46dd-8e02-3ecf557501df",
+        "price": 25.99,
+        "img": "assets/images/Kitchen/frying-pan.jpg",
+        "name": "Teal Frying Pan/Wok",
+        "availableCount": 1,
+        "purchaseCount": 0,
+        "type": "Kitchen"
+    },
+    {
+        "_id": "60d07572bfca4816cbd7add7",
+        "index": 6,
+        "guid": "ae651a15-e30a-4f59-81cb-599da1f80bf9",
+        "price": 38.16,
+        "img": "assets/images/furniture/furniture-3.jpg",
+        "name": "Checkered Ottoman",
+        "availableCount": 4,
+        "purchaseCount": 0,
+        "type": "Furniture"
+    },
+    {
+        "_id": "60d07572424255e5c2c7b567",
+        "index": 7,
+        "guid": "a10cf53e-0c8f-4e0b-bb07-6f3e491b0598",
+        "price": 499.00,
+        "img": "assets/images/tech/iphoneX.jpg",
+        "name": "iPhone X black",
+        "availableCount": 1,
+        "purchaseCount": 0,
+        "type": "Tech"
+    },
+    {
+        "_id": "60d075726bcee927ba85c9ce",
+        "index": 8,
+        "guid": "5e497dfd-cd93-4793-a679-811f2b5ffcab",
+        "price": 8.66,
+        "img": "assets/images/Decor/decor-2.jpg",
+        "name": "Glass jar potted plant",
+        "availableCount": 6,
+        "purchaseCount": 0,
+        "type": "Decor"
+    },
+    {
+        "_id": "60d07572b3434f25274a19e8",
+        "index": 9,
+        "guid": "6b8c3093-3e26-4cd7-9022-e9bbc6388b01",
+        "price": 45.38,
+        "img": "assets/images/furniture/furniture-2.jpg",
+        "name": "Antique rocking chair",
+        "availableCount": 1,
+        "purchaseCount": 0,
+        "type": "Furniture"
+    },
+    {
+        "_id": "60d075724c4a9c7268e3aa27",
+        "index": 10,
+        "guid": "cddbb916-228e-4601-887a-3dfe79993748",
+        "price": 15.36,
+        "img": "assets/images/furniture/furniture-1.jpg",
+        "name": "Comfy Home Office Chair",
+        "availableCount": 2,
+        "purchaseCount": 0,
+        "type": "Furniture"
+    },
+    {
+        "_id": "60d0757251f65a752b1612c3",
+        "index": 11,
+        "guid": "64665474-6ec2-484a-8cb6-70913ce378e1",
+        "price": 249.5,
+        "img": "assets/images/Accessories/fossil.jpg",
+        "name": "Fossil GEN 5E",
+        "availableCount": 1,
+        "purchaseCount": 0,
+        "type": "Accessories"
+    },
+    {
+        "_id": "60d075727452ea458er48544",
+        "index": 12,
+        "guid": "6a234231-1208-4200-9f7a-e77c1a43f5f",
+        "price": 30.25,
+        "img": "assets/images/Kitchen/storage-jars.jpg",
+        "name": "Storage jars (Pack of 6)",
+        "availableCount": 3,
+        "purchaseCount": 0,
+        "type": "Kitchen"
+    },
+    {
+        "_id": "60d07572756874udnd8375u9",
+        "index": 13,
+        "guid": "6f235687-1208-4200-9f7a-e77c1a4445g",
+        "price": 4.00,
+        "img": "assets/images/Kitchen/mugs.jpg",
+        "name": "Coffe mugs",
+        "availableCount": 24,
+        "purchaseCount": 0,
+        "type": "Kitchen"
+    }
+]

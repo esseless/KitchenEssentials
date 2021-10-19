@@ -1,0 +1,174 @@
+.receipt-modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 94px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.receipt-modal-content {
+    background-color: whitesmoke;
+    margin: auto;
+    padding: 20px;
+    border: 5px solid lightblue;
+    border-radius: 10px;
+    width: 36%;
+    height: 74%;
+    color: grey;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+}
+
+.receipt-modal-body {
+    display: flex;
+    flex-direction: column;
+}
+
+.receipt-header {
+    height: 40px;
+    font-size: 24px;
+    text-align: center;
+    font-weight: bolder;
+    color: cadetblue;
+}
+
+.customer-details {
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid lightgray;
+    align-self: center;
+}
+
+.customer-item {
+    display: flex;
+    flex-direction: column;
+    font-weight: bolder;
+    font-size: 18px;
+    margin: 14px;
+}
+
+.customer-item-label {
+    min-width: 160px;
+    max-width: 160px;
+}
+
+.customer-item-value {
+    font-weight: normal;
+    font-size: 14px;
+    min-width: 160px;
+    max-width: 160px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    cursor: context-menu;
+}
+
+.product-details {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin-top: 12px;
+}
+
+.product-details-header {
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+}
+
+.product-details-body {
+    max-height: 230px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    border-bottom: 1px solid lightgrey;
+    align-self: center;
+}
+
+.product-details-header .product-label {
+    min-width: 120px;
+    max-width: 120px;
+    text-align: center;
+    font-size: 18px;
+    margin-right: 12px;
+}
+
+.receipt-item {
+    display: flex;
+    flex-direction: row;
+    margin: 24px 0;
+    padding: 0 24px;
+}
+
+.product-details-body .product-value {
+    min-width: 120px;
+    max-width: 120px;
+    word-wrap: break-word;
+    text-overflow: ellipsis;
+    white-space: normal;
+    text-align: center;
+    font-size: 16px;
+    margin-right: 12px;
+}
+
+.product-details-footer {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid lightgrey;
+    align-self: center;
+}
+
+.product-details-footer-item {
+    display: flex;
+    flex-direction: row;
+    margin: 12px 0;
+}
+
+.product-details-footer-label {
+    min-width: 380px;
+    max-width: 380px;
+    text-align: end;
+    font-size: 18px;
+    margin-right: 12px;
+}
+
+.product-details-footer-value {
+    min-width: 120px;
+    max-width: 120px;
+    word-wrap: break-word;
+    text-overflow: ellipsis;
+    white-space: normal;
+    text-align: center;
+    font-size: 16px;
+    margin-right: 12px;
+    margin-left: 12px;
+}
+
+#total {
+    font-weight: bold;
+}
+
+.receipt-footer {
+    position: fixed;
+    bottom: 11.5%;
+    align-self: center !important;
+}
+
+.receipt-footer button {
+    padding: 8px;
+    border: 4px solid cadetblue;
+    border-radius: 8px;
+    background: inherit;
+    font-size: 18px;
+    font-weight: 800;
+    color: cadetblue;
+}
+
+.receipt-footer button:hover {
+    cursor: pointer;
+}

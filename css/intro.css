@@ -1,0 +1,100 @@
+html {
+    height: 100%;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: whitesmoke;
+    overflow: hidden;
+    height: 98%;
+}
+
+body p {
+    margin-top: 0;
+    font-size: 12px;
+    text-align: center;
+    position: absolute;
+    bottom: 1%;
+    left: 38%;
+}
+
+.app-store {
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.intro-container {
+    position: absolute;
+    left: 29.25%;
+    width: 40%;
+    margin: auto;
+    border: 12px solid cadetblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    transform: translateX(0%);
+    transition: transform ease-out 0.3s;
+}
+
+.intro-container.show-home {
+    transform: translateX(0);
+}
+
+.intro-container.hide-home {
+    transform: translateX(-180%);
+}
+
+.intro-image {
+    width: 100%;
+}
+
+.intro-image img {
+    width: 100%;
+}
+
+.intro-header {
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.intro-header h1 {
+    animation: color_change .25s infinite alternate;
+}
+
+.intro-header h5 {
+    color: #be4316;
+}
+
+.intro-footer {
+    padding: 24px;
+}
+
+.intro-footer button {
+    padding: 16px;
+    border: 4px solid cadetblue;
+    border-radius: 20px;
+    background: inherit;
+    font-size: 22px;
+    font-weight: 800;
+    color: cadetblue;
+}
+
+.intro-footer button:hover {
+    cursor: pointer;
+}
+
+
+@keyframes color_change {
+    from {
+        color: orangered;
+    }
+
+    to {
+        color: orange;
+    }
+}
