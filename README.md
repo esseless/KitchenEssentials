@@ -1,0 +1,2 @@
+# KitchenEssentials
+Simple JS app
